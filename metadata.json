@@ -1,0 +1,6 @@
+{
+  "name": "Acervo Profissional de Moldes",
+  "description": "Página de vendas para o Acervo Profissional de Moldes de papelaria personalizada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
