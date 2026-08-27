@@ -14,31 +14,13 @@ export function Problem() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        {/* WhatsApp Mockup */}
-        <div className="bg-white rounded-[2.5rem] shadow-xl border-8 border-slate-100 overflow-hidden max-w-sm mx-auto w-full">
-          <div className="bg-[#075e54] text-white p-4 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center overflow-hidden">
-               <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Cliente" className="w-full h-full object-cover" />
-            </div>
-            <div>
-              <p className="font-bold">Cliente</p>
-              <p className="text-xs text-white/80">online</p>
-            </div>
-          </div>
-          <div className="bg-[#efeae2] p-4 flex flex-col gap-3 min-h-[300px]">
-            <div className="bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm w-fit max-w-[85%] text-slate-800 relative">
-              Você tem esse tema?
-              <span className="text-[10px] text-slate-400 absolute right-2 bottom-1">09:41</span>
-            </div>
-            <div className="bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm w-fit max-w-[85%] text-slate-800 relative">
-              Preciso de um kit nesse personagem.
-              <span className="text-[10px] text-slate-400 absolute right-2 bottom-1">09:42</span>
-            </div>
-            <div className="bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm w-fit max-w-[85%] text-slate-800 relative">
-              Tem como fazer essas caixinhas?
-              <span className="text-[10px] text-slate-400 absolute right-2 bottom-1">09:45</span>
-            </div>
-          </div>
+        {/* WhatsApp Mockup Replacement */}
+        <div className="rounded-[2.5rem] overflow-hidden max-w-sm mx-auto w-full flex items-center justify-center">
+          <img 
+            src="https://res.cloudinary.com/dvg6hojfs/image/upload/v1787874232/img_0136_9_t6swxo.png" 
+            alt="Conversa de cliente pedindo tema" 
+            className="w-full h-auto drop-shadow-xl"
+          />
         </div>
 
         <div className="flex flex-col gap-8">
