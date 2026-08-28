@@ -4,9 +4,18 @@ import { FolderHeart, MonitorSmartphone, CheckCircle, PackageSearch, LayoutList,
 
 export function ProductGrid() {
   const categories = [
-    "Kit Festa Infantil", "Kit Festa Adulto", "Convites", "Topos de Bolo",
-    "Caixa Milk", "Tubetes", "Sacolinhas", "Bandeirolas",
-    "Rótulos", "Lembrancinhas", "Toppers", "Muito mais..."
+    { name: "Kit Festa Infantil", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875244/kit-infantil-B8-OF8XV_onsu0g.webp" },
+    { name: "Kit Festa Adulto", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875548/kit-adulto-29CDo1ka_eajlmx.webp" },
+    { name: "Convites", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875599/convites-CdZN-1nQ_tszexq.webp" },
+    { name: "Topos de Bolo", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875620/topos-B1K_85-1_dbfe45.webp" },
+    { name: "Caixas", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875643/caixas-Dz_X9ztD_vpjgrl.webp" },
+    { name: "Tubetes", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875713/tubetes-Bi1xO-HX_qstsax.webp" },
+    { name: "Sacolinhas", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875756/sacolinhas-DavjCciZ_p6c7li.webp" },
+    { name: "Bandeirolas", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875783/bandeirolas-Cj-cazMZ_sonibc.webp" },
+    { name: "Rótulos", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875811/rotulos-E8WG0Yxv_oeap46.webp" },
+    { name: "Etiquetas", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875846/etiquetas-DP121LHR_slzq3c.webp" },
+    { name: "Toppers", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875919/toppers-Badg83HN_hnqb3w.webp" },
+    { name: "Diversos", image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787875951/kit-infantil-B8-OF8XV_ojudau.webp" }
   ];
 
   return (
@@ -20,13 +29,19 @@ export function ProductGrid() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-12 max-w-5xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 mb-12 max-w-6xl mx-auto">
         {categories.map((cat, i) => (
-          <div key={i} className="bg-slate-50 rounded-xl border border-slate-100 p-4 flex flex-col items-center justify-center text-center aspect-square transition-all hover:bg-slate-100 cursor-pointer">
-            <div className="w-12 h-12 bg-purple-200 rounded-lg mb-3 flex items-center justify-center text-purple-700">
-               <FolderHeart className="w-6 h-6" />
+          <div key={i} className="bg-white rounded-2xl border border-slate-200 overflow-hidden flex flex-col transition-all hover:shadow-lg hover:border-purple-300 cursor-pointer group shadow-sm">
+            <div className="w-full aspect-square overflow-hidden bg-slate-50 relative flex items-center justify-center">
+              <img 
+                src={cat.image} 
+                alt={cat.name} 
+                className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" 
+              />
             </div>
-            <span className="text-[10px] sm:text-xs font-bold uppercase leading-tight">{cat}</span>
+            <div className="bg-white p-3 sm:p-4 border-t border-slate-100 flex items-center justify-center min-h-[48px] sm:min-h-[56px]">
+               <span className="text-[10px] sm:text-xs font-bold uppercase text-slate-800 leading-tight text-center">{cat.name}</span>
+            </div>
           </div>
         ))}
       </div>

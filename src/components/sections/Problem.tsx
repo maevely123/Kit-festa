@@ -74,10 +74,10 @@ export function Transformation() {
   return (
     <section className="py-12 md:py-24 px-4 md:px-8 max-w-7xl mx-auto text-center bg-white">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 max-w-3xl mx-auto mb-6">
-        Chega de procurar um arquivo toda vez que aparece um pedido.
+        Chega de responder: <span className="text-purple-600">“Não tenho esse tema.”</span>
       </h2>
       <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-16 font-medium">
-        Tenha uma biblioteca de modelos à sua disposição para encontrar rapidamente diferentes temas, formatos e ocasiões.
+        Tenha um acervo completo à sua disposição para encontrar o modelo que precisa, personalizar com mais rapidez e estar preparado para atender <strong className="text-slate-800">praticamente qualquer pedido que chegar.</strong>
       </p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
