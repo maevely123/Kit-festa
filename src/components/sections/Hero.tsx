@@ -4,9 +4,18 @@ import { motion } from 'motion/react';
 import { CheckCircle2, LayoutTemplate, Layers, Star } from 'lucide-react';
 
 export function UrgencyBar() {
+  const currentDate = new Intl.DateTimeFormat('pt-BR', { 
+    timeZone: 'America/Sao_Paulo', 
+    day: '2-digit', 
+    month: '2-digit', 
+    year: 'numeric' 
+  }).format(new Date());
+
   return (
-    <div className="bg-purple-700 text-white py-2 px-4 text-center text-xs font-bold tracking-widest uppercase">
-      OFERTA ESPECIAL • ACESSO IMEDIATO
+    <div className="bg-purple-700 text-white py-2 px-4 text-center text-xs font-bold tracking-widest uppercase flex items-center justify-center">
+      <span className="animate-text-shine">
+        OFERTA ESPECIAL ACABA HOJE {currentDate}
+      </span>
     </div>
   );
 }
@@ -20,10 +29,9 @@ export function Hero() {
         transition={{ duration: 0.5 }}
         className="flex flex-col items-center"
       >
-        <SectionBadge>
-          <LayoutTemplate className="w-4 h-4" />
+        <div className="inline-flex items-center justify-center px-4 py-2 bg-amber-400 text-amber-950 rounded-full text-xs font-black uppercase tracking-widest mb-6 shadow-[0_0_15px_rgba(251,191,36,0.4)]">
           Acervo Profissional de Moldes
-        </SectionBadge>
+        </div>
         
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight max-w-4xl leading-tight mb-4">
           Tenha um <span className="text-purple-600">acervo profissional</span> com milhares de moldes prontos em <span className="text-purple-600 underline">poucos minutos</span>

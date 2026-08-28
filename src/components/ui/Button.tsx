@@ -12,10 +12,10 @@ export function CTAButton({ href, children, className = '' }: ButtonProps) {
   return (
     <div className={`flex flex-col gap-3 ${className}`}>
       <motion.a
-        whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         href={href}
-        className="bg-green-500 hover:bg-green-600 text-white text-center py-4 px-4 sm:px-8 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-green-200 transform transition-all active:scale-95 flex items-center justify-center gap-3 w-full max-w-lg leading-tight"
+        className="animate-cta-pulse bg-green-500 hover:bg-green-600 text-white text-center py-4 px-4 sm:px-8 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-green-200 transform transition-colors active:scale-95 flex items-center justify-center gap-3 w-full max-w-lg leading-tight"
       >
         <span>{children}</span>
       </motion.a>
