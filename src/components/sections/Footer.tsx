@@ -6,10 +6,6 @@ import { motion, AnimatePresence } from 'motion/react';
 export function Faq() {
   const faqs = [
     {
-      q: "Posso usar os moldes para vender personalizados?",
-      a: "Sim. Os arquivos podem ser utilizados para criar produtos físicos personalizados para seus clientes, conforme as condições de uso do material."
-    },
-    {
       q: "Funciona no Canva?",
       a: "Sim. O acervo inclui arquivos em formatos compatíveis com o Canva, permitindo que você edite os modelos diretamente pela plataforma."
     },
@@ -34,24 +30,12 @@ export function Faq() {
       a: "Não. É um produto 100% digital. Você não receberá nada em sua casa."
     },
     {
-      q: "O acesso é vitalício?",
-      a: "Sim, adquirindo o pacote Premium, o seu acesso ao material é vitalício."
-    },
-    {
-      q: "O que são os 360 mil arquivos?",
-      a: "Trata-se de um conteúdo adicional/bônus gigante entregue no pacote Premium, não devendo ser confundido com os +7.500 moldes de alta qualidade do acervo principal."
-    },
-    {
       q: "Serve para quem está começando?",
       a: "Sim. O acervo pode ajudar quem está começando a montar uma biblioteca de referências e modelos para iniciar suas vendas."
     },
     {
       q: "Serve para quem já trabalha com papelaria?",
       a: "Sim. Ele foi pensado também para quem já recebe pedidos e precisa encontrar modelos com rapidez sem perder tempo criando do zero."
-    },
-    {
-      q: "Tem garantia?",
-      a: "Sim, você possui 7 dias de garantia incondicional."
     }
   ];
 

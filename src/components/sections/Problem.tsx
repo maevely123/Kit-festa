@@ -103,39 +103,42 @@ export function HowItWorks() {
   const steps = [
     {
       num: "01",
-      icon: Search,
+      image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787882075/step1-DDgFXI8r_f3bhvy.png",
       title: "Encontre o Tema",
       desc: "Pesquise entre os modelos disponíveis."
     },
     {
       num: "02",
-      icon: MousePointerClick,
+      image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787882216/step2-CUBoFAqM_vf3idh.jpg",
       title: "Edite",
-      desc: "Abra o arquivo no programa compatível e personalize conforme seu pedido."
+      desc: "Abra o arquivo no programa compatível e personalize conforme pedido."
     },
     {
       num: "03",
-      icon: Printer,
+      image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1787882242/step3-Ctesdp7S_nb9doq.jpg",
       title: "Produza",
-      desc: "Imprima, corte, monte e entregue o personalizado ao seu cliente."
+      desc: "Imprima, corte, monte e entregue ao seu cliente."
     }
   ];
 
   return (
-    <section className="py-8 md:py-24 px-4 md:px-8 max-w-4xl mx-auto my-6 md:my-12">
+    <section className="py-8 md:py-24 px-4 md:px-8 max-w-6xl mx-auto my-6 md:my-12">
       <div className="bg-green-50 rounded-3xl border border-green-100 p-6 md:p-12 flex flex-col justify-center">
-        <h4 className="text-green-800 font-bold text-lg md:text-xl mb-8 flex items-center gap-3">
+        <h4 className="text-green-800 font-bold text-lg md:text-xl mb-10 flex items-center justify-center md:justify-start gap-3">
           <span className="w-3 h-3 bg-green-500 rounded-full"></span> Como funciona:
         </h4>
-        <div className="space-y-6 md:space-y-0 md:grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, i) => (
-            <div key={i} className="flex flex-col gap-4">
-              <div className="w-10 h-10 rounded-full bg-green-200 text-green-700 flex items-center justify-center text-sm font-black shrink-0">
+            <div key={i} className="flex flex-col bg-white rounded-2xl p-4 shadow-sm border border-green-100/50 hover:shadow-md transition-shadow relative">
+              <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-green-200 text-green-700 flex items-center justify-center text-sm font-black shadow-sm z-10 border-4 border-green-50">
                 {step.num}
               </div>
-              <div>
-                <p className="text-sm md:text-base leading-tight font-bold text-green-900 mb-2">{step.title}</p>
-                <p className="text-xs md:text-sm text-green-800/80 font-medium">{step.desc}</p>
+              <div className="rounded-xl overflow-hidden mb-4 bg-green-50 aspect-[4/3] flex items-center justify-center">
+                <img src={step.image} alt={step.title} className="w-full h-full object-cover" />
+              </div>
+              <div className="px-2 pb-2">
+                <p className="text-lg leading-tight font-bold text-green-900 mb-2">{step.title}</p>
+                <p className="text-sm text-green-800/80 font-medium leading-relaxed">{step.desc}</p>
               </div>
             </div>
           ))}

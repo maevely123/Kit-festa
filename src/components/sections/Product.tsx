@@ -20,13 +20,10 @@ export function ProductGrid() {
 
   return (
     <section className="py-12 md:py-24 px-4 md:px-8 max-w-7xl mx-auto bg-white">
-      <div className="text-center mb-16">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+      <div className="text-center mb-10 md:mb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900">
           Veja o que você encontra dentro do acervo
         </h2>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto font-medium">
-          Uma biblioteca de modelos organizada para facilitar sua rotina de personalizados.
-        </p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 mb-12 max-w-6xl mx-auto">
@@ -55,52 +52,26 @@ export function ProductGrid() {
 
 export function WhatYouGet() {
   return (
-    <section className="py-12 md:py-24 px-4 md:px-8 bg-white relative overflow-hidden">
-      <div className="max-w-5xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 text-slate-900">
-            Tudo organizado em um único acervo
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white rounded-3xl border border-purple-100 shadow-xl shadow-purple-50 p-6 md:p-8 flex flex-col relative overflow-hidden">
-            <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6 text-purple-600">
-              <PackageSearch className="w-6 h-6" />
-            </div>
-            <h3 className="text-2xl font-bold mb-2">ACERVO PRINCIPAL</h3>
-            <p className="text-4xl font-black text-purple-600 mb-6">+7.500 <span className="text-xl">artes</span></p>
-            
-            <p className="text-slate-500 mb-4 font-bold text-sm uppercase tracking-tight">Inclui arquivos para:</p>
-            <ul className="grid grid-cols-2 gap-3">
-              {['Convites', 'Toppers', 'Caixinhas', 'Kits', 'Lembrancinhas', 'Rótulos', 'Temas variados'].map((item, i) => (
-                <li key={i} className="flex items-center gap-2 text-slate-700 font-medium">
-                  <CheckCircle className="w-4 h-4 text-purple-500 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+    <section className="py-8 md:py-16 px-4 md:px-8 bg-white relative overflow-hidden">
+      <div className="max-w-3xl mx-auto relative z-10">
+        <div className="bg-white rounded-3xl border border-purple-100 shadow-xl shadow-purple-50 p-8 flex flex-col items-center text-center relative overflow-hidden">
+          <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6 text-purple-600">
+            <MonitorSmartphone className="w-6 h-6" />
           </div>
-
-          <div className="bg-white rounded-3xl border border-purple-100 shadow-xl shadow-purple-50 p-8 flex flex-col relative overflow-hidden">
-            <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6 text-purple-600">
-              <MonitorSmartphone className="w-6 h-6" />
-            </div>
-            <h3 className="text-2xl font-bold mb-6">PROGRAMAS COMPATÍVEIS</h3>
-            
-            <div className="flex flex-col gap-3 flex-1">
-              {['Canva', 'CorelDraw', 'Silhouette Studio'].map((prog, i) => (
-                <div key={i} className="bg-slate-50 border border-slate-100 px-6 py-4 rounded-xl flex items-center gap-4">
-                  <PenTool className="w-5 h-5 text-purple-400" />
-                  <span className="font-bold text-slate-800">{prog}</span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 bg-purple-50 p-4 rounded-xl border border-purple-100">
-               <p className="text-purple-800 text-xs font-medium">
-                 * Os arquivos disponíveis possuem formatos compatíveis conforme o material fornecido no acervo.
-               </p>
-            </div>
+          <h3 className="text-2xl font-bold mb-6">PROGRAMAS COMPATÍVEIS</h3>
+          
+          <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
+            {['Canva', 'CorelDraw', 'Silhouette Studio'].map((prog, i) => (
+              <div key={i} className="bg-slate-50 border border-slate-100 px-6 py-4 rounded-xl flex items-center justify-center gap-3">
+                <PenTool className="w-5 h-5 text-purple-400" />
+                <span className="font-bold text-slate-800">{prog}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 bg-purple-50 p-4 rounded-xl border border-purple-100 w-full">
+             <p className="text-purple-800 text-xs font-medium">
+               * Os arquivos disponíveis possuem formatos compatíveis conforme o material fornecido no acervo.
+             </p>
           </div>
         </div>
       </div>
