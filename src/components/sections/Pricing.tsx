@@ -17,23 +17,25 @@ export function Pricing() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-center">
           {/* Basic Package */}
-          <div className="bg-white rounded-[2rem] p-8 md:p-10 border border-slate-200 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-[2rem] p-8 md:p-10 border border-slate-200 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow">
             <h3 className="text-2xl font-bold mb-2 text-slate-900">Pacote Básico</h3>
             <p className="text-slate-500 mb-8 font-medium">O essencial para começar a trabalhar</p>
             
-            <div className="flex items-baseline gap-1 mb-8">
+            <div className="flex items-baseline justify-center gap-1 mb-8">
               <span className="text-2xl font-bold text-slate-400">R$</span>
               <span className="text-5xl font-black text-slate-900 tracking-tight">10,00</span>
             </div>
             
-            <ul className="space-y-4 mb-10 flex-1">
-              {['Kit Festa pronto', 'Acesso imediato', 'Produto digital', 'Garantia de 7 dias'].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-slate-700 font-medium">
-                  <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="flex-1 flex flex-col w-full mb-10">
+              <ul className="space-y-4 text-left w-full">
+                {['Kit Festa pronto', 'Acesso imediato', 'Produto digital', 'Garantia de 7 dias'].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-slate-700 font-medium">
+                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             
             <a href="#" className="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-4 px-8 rounded-2xl transition-colors text-center text-lg">
               QUERO O BÁSICO
@@ -41,48 +43,53 @@ export function Pricing() {
           </div>
 
           {/* Premium Package */}
-          <div className="bg-[#0f172a] text-white rounded-[2rem] p-8 md:p-10 relative overflow-hidden shadow-2xl flex flex-col h-full border border-slate-700 md:scale-105 transform z-10">
+          <div className="bg-white rounded-[2rem] p-8 md:p-10 relative overflow-hidden shadow-[0_20px_50px_rgba(34,197,94,0.15)] flex flex-col items-center text-center h-full border-2 border-green-400 md:scale-105 transform z-10">
+            {/* Top gradient line */}
+            <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-green-400 via-emerald-500 to-green-400"></div>
+            
             {/* Best seller badge */}
-            <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-purple-500 via-emerald-400 to-purple-500"></div>
-            <div className="absolute top-6 right-6 bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest">
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 md:top-6 md:right-6 md:left-auto md:translate-x-0 bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-md px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest whitespace-nowrap z-20">
               Mais Vendido
             </div>
 
-            <div className="relative z-10 h-full flex flex-col">
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-3 pr-24">Oferta Premium</h3>
-                <p className="text-slate-400 text-sm leading-relaxed font-medium">O pacote mais completo com todos os bônus, 360 mil arquivos adicionais e acesso vitalício.</p>
+            <div className="relative z-10 h-full flex flex-col w-full mt-8 md:mt-0">
+              <div className="mb-8 flex flex-col items-center">
+                <h3 className="text-2xl font-bold mb-3 text-slate-900">Oferta Premium</h3>
+                <p className="text-slate-500 text-sm leading-relaxed font-medium">O pacote mais completo com todos os bônus, 360 mil arquivos adicionais e acesso vitalício.</p>
               </div>
               
-              <div className="flex items-baseline gap-1 mb-8">
-                <span className="text-2xl font-bold text-slate-400">R$</span>
-                <span className="text-6xl font-black text-white tracking-tight">19,90</span>
-                <span className="text-sm font-bold text-emerald-400 ml-2 bg-emerald-400/10 px-2 py-1 rounded-md">Único</span>
+              <div className="flex items-center justify-center gap-2 mb-8 flex-wrap">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-2xl font-bold text-slate-400">R$</span>
+                  <span className="text-6xl font-black text-slate-900 tracking-tight">19,90</span>
+                </div>
+                <span className="text-sm font-bold text-green-700 bg-green-100 px-3 py-1.5 rounded-md uppercase tracking-wider">Único</span>
               </div>
               
-              <ul className="space-y-4 mb-10 flex-1 font-medium text-slate-300">
-                {[
-                  '+7.500 artes e moldes',
-                  'Canva, CorelDraw e Silhouette',
-                  'Arquivos editáveis (Convites, Topos, Caixinhas)',
-                  'Todos os Bônus Exclusivos',
-                  'Acesso Vitalício'
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <CTAButton href="https://pay.wiapy.com/9RRPPHsn5Nf" className="w-full text-lg shadow-[0_0_20px_rgba(52,211,153,0.3)]">
+              <div className="flex-1 flex flex-col w-full mb-10">
+                <ul className="space-y-4 inline-block text-left mx-auto font-medium text-slate-700">
+                  {[
+                    '+7.500 artes e moldes',
+                    'Canva, CorelDraw e Silhouette',
+                    'Arquivos editáveis (Convites, Topos, Caixinhas)',
+                    'Todos os Bônus Exclusivos',
+                    'Acesso Vitalício'
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <Check className="w-6 h-6 text-green-500 flex-shrink-0" />
+                      <span className="leading-snug">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <CTAButton href="https://pay.wiapy.com/9RRPPHsn5Nf" className="w-full text-lg">
                 QUERO O PREMIUM AGORA
               </CTAButton>
             </div>
             
-            {/* Glow effects */}
-            <div className="absolute -right-20 -top-20 w-64 h-64 bg-purple-600 rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
-            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-emerald-600 rounded-full blur-[100px] opacity-10 pointer-events-none"></div>
+            {/* Subtle glow effects for light theme */}
+            <div className="absolute -right-20 -top-20 w-64 h-64 bg-green-200 rounded-full blur-[100px] opacity-40 pointer-events-none"></div>
+            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-emerald-200 rounded-full blur-[100px] opacity-40 pointer-events-none"></div>
           </div>
         </div>
       </div>

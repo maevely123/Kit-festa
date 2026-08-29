@@ -29,7 +29,7 @@ export function Hero() {
         transition={{ duration: 0.5 }}
         className="flex flex-col items-center"
       >
-        <div className="inline-flex items-center justify-center px-4 py-2 bg-amber-400 text-amber-950 rounded-full text-xs font-black uppercase tracking-widest mb-6 shadow-[0_0_15px_rgba(251,191,36,0.4)]">
+        <div className="inline-flex items-center justify-center px-3 py-1.5 bg-green-500/10 text-green-700 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-green-500/20">
           Acervo Profissional de Moldes
         </div>
         
