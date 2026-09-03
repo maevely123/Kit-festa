@@ -7,12 +7,9 @@ export function Pricing() {
     <section id="oferta" className="py-12 md:py-24 px-4 md:px-8 bg-white relative overflow-hidden">
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-4 text-slate-900">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900">
             Escolha o pacote ideal para você
           </h2>
-          <p className="text-xl text-slate-600 font-medium">
-            Comece com o essencial ou tenha acesso ao pacote mais completo.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-center">
@@ -23,12 +20,12 @@ export function Pricing() {
             
             <div className="flex items-baseline justify-center gap-1 mb-8">
               <span className="text-2xl font-bold text-slate-400">R$</span>
-              <span className="text-5xl font-black text-slate-900 tracking-tight">10,00</span>
+              <span className="text-5xl font-black text-slate-900 tracking-tight">9,90</span>
             </div>
             
             <div className="flex-1 flex flex-col w-full mb-10">
               <ul className="space-y-4 text-left w-full">
-                {['Kit Festa pronto', 'Acesso imediato', 'Produto digital', 'Garantia de 7 dias'].map((item, i) => (
+                {['+7.500 artes e moldes', 'Acesso imediato', 'Produto digital', 'Garantia de 7 dias'].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-slate-700 font-medium">
                     <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                     <span>{item}</span>
@@ -37,7 +34,7 @@ export function Pricing() {
               </ul>
             </div>
             
-            <a href="#" className="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-4 px-8 rounded-2xl transition-colors text-center text-lg">
+            <a href="https://go.pepperpay.com.br/88xdm" className="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-4 px-8 rounded-2xl transition-colors text-center text-lg">
               QUERO O BÁSICO
             </a>
           </div>
@@ -53,27 +50,34 @@ export function Pricing() {
             </div>
 
             <div className="relative z-10 h-full flex flex-col w-full mt-8 md:mt-0">
-              <div className="mb-8 flex flex-col items-center">
-                <h3 className="text-2xl font-bold mb-3 text-slate-900">Oferta Premium</h3>
-                <p className="text-slate-500 text-sm leading-relaxed font-medium">O pacote mais completo com todos os bônus, 360 mil arquivos adicionais e acesso vitalício.</p>
+              <div className="mb-6 flex flex-col items-center">
+                <h3 className="text-2xl font-bold mb-1 text-slate-900">Oferta Premium</h3>
               </div>
               
-              <div className="flex items-center justify-center gap-2 mb-8 flex-wrap">
-                <div className="flex items-baseline gap-1">
-                  <span className="text-2xl font-bold text-slate-400">R$</span>
-                  <span className="text-6xl font-black text-slate-900 tracking-tight">19,90</span>
+              <div className="flex flex-col items-center justify-center mb-8">
+                <span className="text-sm font-bold text-red-500 line-through mb-1">De R$ 258,70</span>
+                <div className="flex items-center justify-center gap-2 flex-wrap">
+                  <div className="flex items-baseline gap-1 text-emerald-500">
+                    <span className="text-2xl font-bold">R$</span>
+                    <span className="text-6xl font-black tracking-tight">19,90</span>
+                  </div>
+                  <span className="text-sm font-bold text-emerald-700 bg-emerald-100 px-3 py-1.5 rounded-md uppercase tracking-wider">Único</span>
                 </div>
-                <span className="text-sm font-bold text-green-700 bg-green-100 px-3 py-1.5 rounded-md uppercase tracking-wider">Único</span>
               </div>
               
               <div className="flex-1 flex flex-col w-full mb-10">
                 <ul className="space-y-4 inline-block text-left mx-auto font-medium text-slate-700">
                   {[
                     '+7.500 artes e moldes',
-                    'Canva, CorelDraw e Silhouette',
-                    'Arquivos editáveis (Convites, Topos, Caixinhas)',
-                    'Todos os Bônus Exclusivos',
-                    'Acesso Vitalício'
+                    '360 mil arquivos',
+                    'Modelos Editáveis',
+                    '8.000 Caixinhas',
+                    '1.500 Topos',
+                    'Kit Festa Adulto',
+                    'Guia de Organização',
+                    'Suporte VIP',
+                    'Acesso Vitalício',
+                    'Garantia de 7 dias'
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <Check className="w-6 h-6 text-green-500 flex-shrink-0" />

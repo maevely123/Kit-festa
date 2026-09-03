@@ -1,48 +1,66 @@
 import React from 'react';
 import { Gift, Star, Users, CheckCircle2, BadgeCheck, Quote } from 'lucide-react';
+import { CTAButton } from '../ui/Button';
 
 export function Bonuses() {
   const bonuses = [
-    { title: "Editáveis", desc: "Modelos prontos para personalizar" },
-    { title: "8.000 Caixinhas", desc: "Variedade de temas e formatos" },
-    { title: "1.500 Topos", desc: "Prontos para imprimir" },
-    { title: "Kit Festa Adulto", desc: "Temas exclusivos para adultos" },
-    { title: "Guia de Organização", desc: "Para ajudar na sua rotina" },
-    { title: "360 mil arquivos", desc: "Acervo complementar gigante" }
+    { title: "Editáveis", desc: "Modelos prontos para personalizar", anchor: "R$ 39,90" },
+    { title: "8.000 Caixinhas", desc: "Variedade de temas e formatos", anchor: "R$ 47,00" },
+    { title: "1.500 Topos", desc: "Prontos para imprimir", anchor: "R$ 29,90" },
+    { title: "Kit Festa Adulto", desc: "Temas exclusivos para adultos", anchor: "R$ 35,00" },
+    { title: "Guia de Organização", desc: "Para ajudar na sua rotina", anchor: "R$ 29,90" },
+    { title: "360 mil arquivos", desc: "Acervo complementar gigante", anchor: "R$ 67,00" }
   ];
 
   return (
-    <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+    <section className="py-16 md:py-24 px-4 md:px-8 bg-slate-50/50">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100/60 text-emerald-600 rounded-full font-bold text-xs sm:text-sm tracking-wide mb-6">
-            <Gift className="w-4 h-4" /> CONTEÚDO EXTRA
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">
-            Bônus <span className="text-emerald-400">Exclusivos</span>
+            Bônus <span className="text-emerald-500">Exclusivos</span>
           </h2>
           <p className="text-lg md:text-xl text-slate-500 font-medium max-w-2xl mx-auto">
             Materiais complementares que você obtém junto ao acervo, sem custo adicional.
           </p>
         </div>
-
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-6 md:gap-x-8 pt-6">
+        
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-6 md:gap-x-8 pt-6 mb-16">
           {bonuses.map((bonus, i) => (
-            <div key={i} className="bg-white rounded-[2rem] border border-purple-50/80 shadow-[0_4px_40px_-10px_rgba(240,230,255,1)] pt-12 pb-8 px-6 flex flex-col items-center text-center relative hover:-translate-y-1 transition-transform duration-300">
+            <div key={i} className="bg-white rounded-[2rem] border border-slate-200 shadow-md pt-12 pb-8 px-6 flex flex-col items-center text-center relative hover:-translate-y-1 transition-transform duration-300">
               {/* Floating Top Badge */}
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-400 text-white px-5 py-1.5 rounded-full font-extrabold text-[11px] sm:text-xs tracking-widest shadow-md whitespace-nowrap">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-500 text-white px-5 py-1.5 rounded-full font-extrabold text-[11px] sm:text-xs tracking-widest shadow-md whitespace-nowrap">
                 BÔNUS 0{i + 1}
               </div>
               
-              {/* Gift Icon */}
-              <div className="w-20 h-20 bg-emerald-50 rounded-3xl flex items-center justify-center text-emerald-500 mb-6 shadow-[0_0_30px_rgba(52,211,153,0.15)]">
-                <Gift className="w-9 h-9" />
+              {/* Gift Emoji */}
+              <div className="w-20 h-20 bg-slate-50 rounded-3xl flex items-center justify-center text-4xl mb-6 shadow-sm border border-slate-100">
+                🎁
               </div>
               
               <h3 className="text-xl font-black text-slate-900 mb-2">{bonus.title}</h3>
-              <p className="text-slate-500 font-medium text-sm sm:text-base leading-relaxed">{bonus.desc}</p>
+              <p className="text-slate-500 font-medium text-sm sm:text-base leading-relaxed mb-6">{bonus.desc}</p>
+              
+              <div className="mt-auto pt-4 border-t border-slate-100 w-full flex flex-col items-center">
+                <span className="text-sm font-bold text-slate-400 line-through mb-1">De {bonus.anchor}</span>
+                <span className="text-lg font-black text-emerald-500 uppercase tracking-tight">Por R$ 0,00</span>
+              </div>
             </div>
           ))}
+        </div>
+
+        {/* Objection breaker and CTA */}
+        <div className="bg-emerald-50 border border-emerald-200 rounded-[2rem] p-8 md:p-12 text-center max-w-3xl mx-auto shadow-sm">
+          <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-4">
+            Levando hoje, você economiza <span className="text-emerald-600">R$ 248,70</span>
+          </h3>
+          <p className="text-lg text-slate-600 font-medium mb-8">
+            O valor total de todos esses bônus vendidos separadamente é de R$ 248,70. Mas finalizando sua compra agora, você leva <strong>TUDO DE GRAÇA!</strong>
+          </p>
+          <div className="flex justify-center">
+            <CTAButton href="#oferta" className="w-full sm:w-auto min-w-[300px]">
+              QUERO TODOS OS BÔNUS
+            </CTAButton>
+          </div>
         </div>
       </div>
     </section>

@@ -55,10 +55,6 @@ export function Hero() {
         <CTAButton href="#oferta">
           QUERO RECEBER O ACERVO COMPLETO
         </CTAButton>
-
-        <p className="text-sm text-slate-500 mt-6 max-w-md mx-auto">
-          Você compra online e recebe o acesso ao material digital. Nenhum produto físico será enviado.
-        </p>
       </motion.div>
     </section>
   );
@@ -75,11 +71,15 @@ export function Numbers() {
   return (
     <section className="py-8 md:py-12 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {stats.map((stat, idx) => (
-            <div key={idx} className="bg-white rounded-3xl border border-purple-100 shadow-lg p-6 flex flex-col justify-center items-center text-center">
-              <div className="text-3xl md:text-4xl font-black text-purple-600 mb-2 leading-none">{stat.value}</div>
-              <div className="text-xs md:text-sm font-bold text-slate-500 uppercase tracking-tight">{stat.label}</div>
+            <div key={idx} className="bg-white rounded-2xl sm:rounded-3xl border border-purple-100 shadow-md sm:shadow-lg p-3 sm:p-4 md:p-6 flex flex-col justify-center items-center text-center">
+              <div className="text-[1.35rem] min-[375px]:text-2xl sm:text-3xl md:text-4xl font-black text-purple-600 mb-1.5 sm:mb-2 leading-none tracking-tighter sm:tracking-tight max-w-full">
+                {stat.value}
+              </div>
+              <div className="text-[9px] min-[375px]:text-[10px] sm:text-xs md:text-sm font-bold text-slate-500 uppercase tracking-tighter sm:tracking-tight leading-tight">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
